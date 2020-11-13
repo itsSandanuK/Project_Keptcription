@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+//GitHub - Press plus icon to update git
 void main() => runApp(MaterialApp(
       home: KeptCription(),
     ));
@@ -29,7 +30,11 @@ class KeptCription extends StatelessWidget {
               height: 100.0,
               child: Text(
                 "Text Medicine",
-                style: TextStyle(fontFamily: "fonts/Neometric-Regular.otf"),
+                style: TextStyle(
+                  fontFamily: "fonts/Neometric-Regular.otf",
+                  fontSize: 18.0,
+                ),
+                textAlign: TextAlign.center,
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,

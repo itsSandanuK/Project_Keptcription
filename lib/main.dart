@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-
 //GitHub - Press plus icon to update git
 void main() => runApp(MaterialApp(
       home: KeptCription(),

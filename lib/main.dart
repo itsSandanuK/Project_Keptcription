@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+
 //GitHub - Press plus icon to update git
 void main() => runApp(MaterialApp(
       home: KeptCription(),
@@ -10,7 +11,7 @@ class KeptCription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.blue[200],
       appBar: AppBar(
         title: Text(
           "KeptCription",

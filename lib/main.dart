@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-//GitHub - Press commit icon to update git
+//GitHub - Press commit to update git
 void main() => runApp(MaterialApp(
       home: KeptCription(),
     ));
@@ -37,7 +37,12 @@ class KeptCription extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(20.0),
+                  topLeft: Radius.circular(20.0),
+                  bottomLeft: Radius.circular(20.0),
+                  bottomRight: Radius.circular(20.0),
+                ),
               ),
             ),
           ],

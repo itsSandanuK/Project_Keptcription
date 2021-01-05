@@ -24,18 +24,49 @@ class KeptCription extends StatelessWidget {
         elevation: 5.0,
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(5.0, 20.0, 5.0, 0.0),
-        child: Column(
+        padding: const EdgeInsets.only(top: 235.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Container(
-              width: 171.0,
+              width: 180.0,
               height: 300.0,
               child: Align(
-                alignment: Alignment.center,
-                child: Text("Text Massage",
-                    style:
-                        TextStyle(fontFamily: 'Raleway', color: Colors.white),
-                    textAlign: TextAlign.center),
+                alignment: Alignment(0.0, -0.7),
+                child: Text(
+                  "Parasitamol",
+                  style: TextStyle(
+                    fontFamily: 'Raleway',
+                    color: Colors.white,
+                    fontSize: 26.0,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(44, 107, 171, 30),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(50.0),
+                  topLeft: Radius.circular(50.0),
+                  bottomLeft: Radius.circular(50.0),
+                  bottomRight: Radius.circular(50.0),
+                ),
+              ),
+            ),
+            Container(
+              width: 180.0,
+              height: 300.0,
+              child: Align(
+                alignment: Alignment(0.0, -0.7),
+                child: Text(
+                  "Parasitamol",
+                  style: TextStyle(
+                    fontFamily: 'Raleway',
+                    color: Colors.white,
+                    fontSize: 26.0,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ),
               decoration: BoxDecoration(
                 color: Color.fromRGBO(44, 107, 171, 30),

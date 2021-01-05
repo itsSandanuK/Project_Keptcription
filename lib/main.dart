@@ -1,6 +1,8 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
+
+// ignore: unused_import
+import 'package:project_keptcription/models/models.dart';
 
 //GitHub - Press commit to update git
 void main() => runApp(MaterialApp(
@@ -11,7 +13,7 @@ class KeptCription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           "KeptCription",
@@ -19,29 +21,29 @@ class KeptCription extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: Colors.green[200],
-        elevation: 15.0,
+        elevation: 5.0,
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(5.0, 20.0, 5.0, 0.0),
         child: Column(
           children: <Widget>[
             Container(
-              width: 150.0,
-              height: 100.0,
-              child: Text(
-                "Text Medicine",
-                style: TextStyle(
-                  fontFamily: "fonts/Neometric-Regular.otf",
-                  fontSize: 18.0,
-                ),
-                textAlign: TextAlign.center,
+              width: 171.0,
+              height: 300.0,
+              child: Align(
+                alignment: Alignment.center,
+                child: Text("Text Massage",
+                    style:
+                        TextStyle(fontFamily: 'Raleway', color: Colors.white),
+                    textAlign: TextAlign.center),
               ),
               decoration: BoxDecoration(
+                color: Color.fromRGBO(44, 107, 171, 30),
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(20.0),
-                  topLeft: Radius.circular(20.0),
-                  bottomLeft: Radius.circular(20.0),
-                  bottomRight: Radius.circular(20.0),
+                  topRight: Radius.circular(50.0),
+                  topLeft: Radius.circular(50.0),
+                  bottomLeft: Radius.circular(50.0),
+                  bottomRight: Radius.circular(50.0),
                 ),
               ),
             ),
@@ -52,7 +54,7 @@ class KeptCription extends StatelessWidget {
         onPressed: () {},
         child: Icon(Icons.add),
         elevation: 7.0,
-        backgroundColor: Colors.blue[300],
+        backgroundColor: Colors.blue[200],
       ),
     );
   }

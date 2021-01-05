@@ -76,7 +76,19 @@ flutter:
         - asset: fonts/ROBOTO-LIGHT.ttf
         - asset: fonts/ROBOTO-MEDIUM.ttf
         - asset: fonts/ROBOTO-THIN.ttf
-  # weight: 700.0
-  #
+
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-SemiBold.ttf
+        - asset: fonts/Raleway-Regular.ttf
+        - asset: fonts/Raleway-Bold.ttf
+
+    - family: HomepageBaukasten
+      fonts:
+        - asset: fonts/HomepageBaukasten-Bold.otf
+        - asset: fonts/HomepageBaukasten-Book.otf
+          weight: 700.0
+  uses-material-design: true
+  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

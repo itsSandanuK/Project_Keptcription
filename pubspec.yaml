@@ -87,8 +87,8 @@ flutter:
       fonts:
         - asset: fonts/HomepageBaukasten-Bold.otf
         - asset: fonts/HomepageBaukasten-Book.otf
-          weight: 700.0
-  uses-material-design: true
+          #weight: 700.0
+  #uses-material-design: true
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

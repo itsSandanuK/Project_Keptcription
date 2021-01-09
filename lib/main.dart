@@ -23,12 +23,12 @@ class KeptCription extends StatelessWidget {
         backgroundColor: Colors.green[200],
         elevation: 5.0,
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 235.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Container(
+      body: Stack(
+        children: <Widget>[
+          Positioned(
+            top: 235.0,
+            left: 0.0,
+            child: Container(
               width: 180.0,
               height: 300.0,
               child: Align(
@@ -53,7 +53,9 @@ class KeptCription extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
+          ),
+          Positioned(
+            child: Container(
               width: 180.0,
               height: 300.0,
               child: Align(
@@ -78,8 +80,8 @@ class KeptCription extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

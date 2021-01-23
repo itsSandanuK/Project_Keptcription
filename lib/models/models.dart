@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 var searchText = Text(
   "Search",
   style: TextStyle(
-    fontFamily: 'fonts/HomepageBaukasten-Bold.otf',
+    fontFamily: 'HnomepageBaukaste',
     fontSize: 67.0,
     color: Color.fromRGBO(112, 112, 42, 100),
   ),
@@ -14,7 +14,7 @@ var searchText = Text(
 var todayText = Text(
   "Today",
   style: TextStyle(
-      fontFamily: 'fonts/Raleway-SemiBold.ttf',
+      fontFamily: 'Raleway',
       fontSize: 67.0,
       color: Color.fromRGBO(255, 255, 255, 100)),
 );

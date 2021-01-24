@@ -69,9 +69,19 @@ flutter:
     - family: Neometric
       fonts:
         - asset: fonts/Neometric-Regular.otf
-        - asset: fonts/Neometric Alt Black (Regular).otf   
-        - asset: fonts/Neometric Alt Extra Bold (Bold).otf  
+  
+    - family: Neometric_Black
+      fonts:
+        - asset: fonts/Neometric Alt Black (Regular).otf 
+
+    - family: Neometric_Extra_Bold
+      fonts:
+        - asset: fonts/Neometric Alt Extra Bold (Bold).otf      
+
+    - family: Neometric_Light
+      fonts:
         - asset: fonts/Neometric Light (Regular).otf
+        
            
     - family: Roboto
       fonts:
@@ -84,14 +94,23 @@ flutter:
 
     - family: Raleway
       fonts:
-        - asset: fonts/Raleway-SemiBold.ttf
-        - asset: fonts/Raleway-Regular.ttf
-        - asset: fonts/Raleway-Bold.ttf
+        - asset: fonts/Raleway-Regular.ttf      
+
+    - family: Raleway_SemiBold
+      fonts:
+      - asset: fonts/Raleway-SemiBold.ttf   
+
+    - family: Raleway_Bold       
+      fonts:
+        - asset: fonts/Raleway-Bold.ttf      
 
 
     - family: HnomepageBaukaste
       fonts:
         - asset: fonts/HomepageBaukasten-Bold.otf
+
+    - family: HnomepageBaukaste_Book
+      fonts:
         - asset: fonts/HomepageBaukasten-Book.otf
           #weight: 700.0
   #uses-material-design: true

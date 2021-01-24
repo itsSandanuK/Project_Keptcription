@@ -20,11 +20,17 @@ class _KeptCriptionState extends State<KeptCription> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
-          " ",
-          style: TextStyle(color: Colors.white),
+        leading: Align(
+          alignment: Alignment(-0.00001, 0),
+          child: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.menu,
+              color: Colors.white,
+              size: 50.0,
+            ),
+          ),
         ),
-        centerTitle: true,
         backgroundColor: Color.fromRGBO(44, 107, 195, 1),
         elevation: 0.0,
       ),
@@ -36,6 +42,58 @@ class _KeptCriptionState extends State<KeptCription> {
               child: Container(
                 width: 410.0,
                 height: 227.0,
+                child: Stack(children: <Widget>[
+                  Align(
+                    alignment: Alignment(0.00, -0.75),
+                    child: Text(
+                      "12",
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        color: Colors.white,
+                        fontSize: 150.0,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Text(
+                      "Today",
+                      style: TextStyle(
+                        fontFamily: 'Raleway_SemiBold',
+                        color: Colors.white,
+                        fontSize: 33.0,
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.70,
+                    child: Align(
+                      alignment: Alignment(-0.85, 0.0009),
+                      child: Text(
+                        "11",
+                        style: TextStyle(
+                          fontFamily: 'Raleway',
+                          color: Colors.white,
+                          fontSize: 85.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.70,
+                    child: Align(
+                      alignment: Alignment(0.85, -0.0001),
+                      child: Text(
+                        "13",
+                        style: TextStyle(
+                          fontFamily: 'Raleway',
+                          color: Colors.white,
+                          fontSize: 85.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ]),
                 decoration: BoxDecoration(
                   color: Color.fromRGBO(44, 107, 195, 1),
                   borderRadius: BorderRadius.only(
@@ -50,65 +108,64 @@ class _KeptCriptionState extends State<KeptCription> {
                   ],
                 ),
               )),
-          SingleChildScrollView(
+          Positioned(
+            //First Container
+            top: 230.0,
+            left: 12.0,
             child: Container(
-              child: Positioned(
-                //First Container
-                top: 230.0,
-                left: 12.0,
-                child: Container(
-                  width: 180.0,
-                  height: 300.0,
-                  child: Stack(alignment: Alignment.center, children: <Widget>[
-                    Positioned(
-                      top: 40,
-                      child: Text(
-                        "Paracitamol",
-                        style: TextStyle(
-                          fontFamily: 'Raleway',
-                          color: Colors.white,
-                          fontSize: 26.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+              width: 180.0,
+              height: 300.0,
+              child: Stack(alignment: Alignment.center, children: <Widget>[
+                Positioned(
+                  top: 40,
+                  child: Text(
+                    "Paracitamol",
+                    style: TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.white,
+                      fontSize: 26.0,
+                      fontWeight: FontWeight.bold,
                     ),
-                    Positioned(
-                      top: 70.0,
-                      child: Text(
-                        "12 Days Left",
-                        style: TextStyle(
-                          fontFamily: 'Raleway',
-                          color: Colors.white,
-                          fontSize: 18.0,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    )
-                  ]),
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(44, 107, 171, 10),
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(50.0),
-                      topLeft: Radius.circular(50.0),
-                      bottomLeft: Radius.circular(50.0),
-                      bottomRight: Radius.circular(50.0),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black38,
-                          blurRadius: 6.0,
-                          offset: Offset(3.0, 3.0))
-                    ],
+                    textAlign: TextAlign.center,
                   ),
                 ),
+                Positioned(
+                  top: 70.0,
+                  child: Opacity(
+                    opacity: 0.80,
+                    child: Text(
+                      "12 Days Left",
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        color: Colors.white,
+                        fontSize: 18.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                )
+              ]),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(44, 107, 171, 10),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(50.0),
+                  topLeft: Radius.circular(50.0),
+                  bottomLeft: Radius.circular(50.0),
+                  bottomRight: Radius.circular(50.0),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black38,
+                      blurRadius: 6.0,
+                      offset: Offset(3.0, 3.0))
+                ],
               ),
             ),
           ),
           Positioned(
             //Second Container
             top: 230.0,
-            left: 12.0,
+            right: 12.0,
             child: Container(
               width: 180.0,
               height: 300.0,
@@ -128,14 +185,17 @@ class _KeptCriptionState extends State<KeptCription> {
                 ),
                 Positioned(
                   top: 70.0,
-                  child: Text(
-                    "6 Days Left",
-                    style: TextStyle(
-                      fontFamily: 'Raleway',
-                      color: Colors.white,
-                      fontSize: 18.0,
+                  child: Opacity(
+                    opacity: 0.80,
+                    child: Text(
+                      "6 Days Left",
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        color: Colors.white,
+                        fontSize: 18.0,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 )
               ]),
@@ -158,7 +218,7 @@ class _KeptCriptionState extends State<KeptCription> {
           ),
           Positioned(
             //Third Container
-            top: 230.0,
+            top: 535.0,
             left: 12.0,
             child: Container(
               width: 180.0,
@@ -179,14 +239,17 @@ class _KeptCriptionState extends State<KeptCription> {
                 ),
                 Positioned(
                   top: 70.0,
-                  child: Text(
-                    "6 Days Left",
-                    style: TextStyle(
-                      fontFamily: 'Raleway',
-                      color: Colors.white,
-                      fontSize: 18.0,
+                  child: Opacity(
+                    opacity: 0.80,
+                    child: Text(
+                      "6 Days Left",
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        color: Colors.white,
+                        fontSize: 18.0,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 )
               ]),
@@ -209,8 +272,8 @@ class _KeptCriptionState extends State<KeptCription> {
           ),
           Positioned(
             //Forth Container
-            top: 230.0,
-            left: 12.0,
+            top: 535.0,
+            right: 12.0,
             child: Container(
               width: 180.0,
               height: 300.0,
@@ -230,14 +293,17 @@ class _KeptCriptionState extends State<KeptCription> {
                 ),
                 Positioned(
                   top: 70.0,
-                  child: Text(
-                    "6 Days Left",
-                    style: TextStyle(
-                      fontFamily: 'Raleway',
-                      color: Colors.white,
-                      fontSize: 18.0,
+                  child: Opacity(
+                    opacity: 0.80,
+                    child: Text(
+                      "6 Days Left",
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        color: Colors.white,
+                        fontSize: 18.0,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 )
               ]),
@@ -267,7 +333,9 @@ class _KeptCriptionState extends State<KeptCription> {
             child: FittedBox(
               child: Positioned(
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _mediAddBottomSheet(context);
+                  },
                   child: Icon(
                     Icons.add,
                     size: 50,
@@ -280,4 +348,17 @@ class _KeptCriptionState extends State<KeptCription> {
       ]),
     );
   }
+}
+
+void _mediAddBottomSheet(context) {
+  showModalBottomSheet(
+      context: context,
+      builder: (BuildContext bc) {
+        return Container(
+          height: 500.0,
+          child: Stack(
+            children: <Widget>[],
+          ),
+        );
+      });
 }

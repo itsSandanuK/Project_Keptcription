@@ -1,8 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-// ignore: unused_import
-import 'package:project_keptcription/models/models.dart';
+import 'models/global.dart';
 
 //GitHub - Press commit to update git
 void main() => runApp(MaterialApp(

@@ -366,12 +366,19 @@ void _mediAddBottomSheet(context) {
                 topRight: Radius.circular(15),
               ),
             ),
-            child: Text(
-              "Add a Medication",
-              style: TextStyle(
-                fontFamily: 'Raleway_SemiBold',
-                fontSize: 30,
-                color: bottomSheetTitle,
+            child: Center(
+              child: Container(
+                padding: EdgeInsets.only(
+                  top: 12,
+                ),
+                child: Text(
+                  "Add a Medication",
+                  style: TextStyle(
+                    fontFamily: 'SanFransico_Bold',
+                    fontSize: 30,
+                    color: bottomSheetTitleColor,
+                  ),
+                ),
               ),
             ),
           ),

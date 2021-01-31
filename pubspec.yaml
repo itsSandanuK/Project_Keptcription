@@ -112,8 +112,38 @@ flutter:
     - family: HnomepageBaukaste_Book
       fonts:
         - asset: fonts/HomepageBaukasten-Book.otf
+
+    - family: Product_Sans
+    #Google Font
+      fonts:
+        - asset: fonts/PRODUCT SANS REGULAR.TTF       
+
+    - family: SanFransico_Bold
+    #apple font
+      fonts:
+        - asset: fonts/SFPRODISPLAY-BOLD.TTF      
+
+    - family: SanFransico_Heavy
+    #apple font
+      fonts:
+        - asset: fonts/SFPRODISPLAY-HEAVY.TTF   
+
+    - family: SanFransico_Meduim
+    #apple font
+      fonts:
+        - asset: fonts/SFPRODISPLAY-MEDIUM.TTF         
+
+    - family: SanFransico
+    #apple font
+      fonts:
+        - asset: fonts/SFPRODISPLAY-REGULAR.TTF
+
+    - family: SanFransico_SemiBold
+    #apple font
+      fonts:
+        - asset: fonts/SFPRODISPLAY-SEMIBOLD.TTF                        
           #weight: 700.0
-  #uses-material-design: true
+  # uses-material-design: true
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

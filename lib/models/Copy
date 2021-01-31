@@ -16,6 +16,9 @@ class KeptCription extends StatefulWidget {
 class _KeptCriptionState extends State<KeptCription> {
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -94,7 +97,7 @@ class _KeptCriptionState extends State<KeptCription> {
                   ),
                 ]),
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(44, 107, 195, 1),
+                  color: appBarColor,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(50.0),
                     bottomRight: Radius.circular(50.0),
@@ -145,7 +148,7 @@ class _KeptCriptionState extends State<KeptCription> {
                 )
               ]),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
+                color: taskBoxColor,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(50.0),
                   topLeft: Radius.circular(50.0),
@@ -199,7 +202,7 @@ class _KeptCriptionState extends State<KeptCription> {
                 )
               ]),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
+                color: taskBoxColor,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(50.0),
                   topLeft: Radius.circular(50.0),
@@ -253,7 +256,7 @@ class _KeptCriptionState extends State<KeptCription> {
                 )
               ]),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
+                color: taskBoxColor,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(50.0),
                   topLeft: Radius.circular(50.0),
@@ -307,7 +310,7 @@ class _KeptCriptionState extends State<KeptCription> {
                 )
               ]),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
+                color: taskBoxColor,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(50.0),
                   topLeft: Radius.circular(50.0),
@@ -361,3 +364,25 @@ void _mediAddBottomSheet(context) {
         );
       });
 }
+
+
+
+
+//Shit
+height: 75.0,
+            width: 75.0,
+            child: FittedBox(
+              child: Positioned(
+                child: FloatingActionButton(
+                  onPressed: () {
+                    _mediAddBottomSheet(context);
+                  },
+                  child: Icon(
+                    Icons.add,
+                    size: 50,
+                  ),
+                  elevation: 0.0,
+                  backgroundColor: Colors.blue[200],
+                ),
+              ),
+            )),

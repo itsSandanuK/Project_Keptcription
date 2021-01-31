@@ -1,6 +1,6 @@
-# project_keptcription
+# keptcription
 
-Medicine managing application
+Medicine managing software
 
 ## Getting Started
 

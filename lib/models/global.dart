@@ -11,3 +11,5 @@ Color taskBoxColorDark = new Color(0xf314963);
 Color appBarColorDark = new Color(0xf5B7C9E);
 
 Color searchColorDark = new Color(0xff000000);
+
+Color bottomSheetTitle = new Color(0xff314963);

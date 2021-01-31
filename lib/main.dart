@@ -36,7 +36,7 @@ class _KeptCriptionState extends State<KeptCription> {
       body: Stack(
         children: <Widget>[
           Positioned(
-              //App Bar
+              //AppBarBottom
               top: 0.0,
               child: Container(
                 width: 410.0,
@@ -94,7 +94,7 @@ class _KeptCriptionState extends State<KeptCription> {
                   ),
                 ]),
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(44, 107, 195, 1),
+                  color: appBarColor,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(50.0),
                     bottomRight: Radius.circular(50.0),
@@ -106,219 +106,221 @@ class _KeptCriptionState extends State<KeptCription> {
                         offset: Offset(0.0, 0.0))
                   ],
                 ),
-              )),
+              )), //EndAppBarBottom
           Positioned(
-            //First Container
             top: 230.0,
-            left: 12.0,
             child: Container(
-              width: 180.0,
-              height: 300.0,
-              child: Stack(alignment: Alignment.center, children: <Widget>[
-                Positioned(
-                  top: 40,
-                  child: Text(
-                    "Paracitamol",
-                    style: TextStyle(
-                      fontFamily: 'Raleway',
-                      color: Colors.white,
-                      fontSize: 26.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Positioned(
-                  top: 70.0,
-                  child: Opacity(
-                    opacity: 0.80,
-                    child: Text(
-                      "12 Days Left",
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 18.0,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                )
-              ]),
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50.0),
-                  topLeft: Radius.circular(50.0),
-                  bottomLeft: Radius.circular(50.0),
-                  bottomRight: Radius.circular(50.0),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 6.0,
-                      offset: Offset(3.0, 3.0))
-                ],
+              margin: EdgeInsets.only(
+                left: 12,
               ),
-            ),
-          ),
-          Positioned(
-            //Second Container
-            top: 230.0,
-            right: 12.0,
-            child: Container(
-              width: 180.0,
-              height: 300.0,
-              child: Stack(alignment: Alignment.center, children: <Widget>[
-                Positioned(
-                  top: 40,
-                  child: Text(
-                    "Amoxicillin",
-                    style: TextStyle(
-                      fontFamily: 'Raleway',
-                      color: Colors.white,
-                      fontSize: 26.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Positioned(
-                  top: 70.0,
-                  child: Opacity(
-                    opacity: 0.80,
-                    child: Text(
-                      "6 Days Left",
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 18.0,
+              child: GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                children: <Widget>[
+                  Container(
+                    //FirstContainer
+                    width: 180.0,
+                    height: 300.0,
+                    child:
+                        Stack(alignment: Alignment.center, children: <Widget>[
+                      Positioned(
+                        top: 40,
+                        child: Text(
+                          "Paracitamol",
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Colors.white,
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                )
-              ]),
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50.0),
-                  topLeft: Radius.circular(50.0),
-                  bottomLeft: Radius.circular(50.0),
-                  bottomRight: Radius.circular(50.0),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 6.0,
-                      offset: Offset(3.0, 3.0))
-                ],
-              ),
-            ),
-          ),
-          Positioned(
-            //Third Container
-            top: 535.0,
-            left: 12.0,
-            child: Container(
-              width: 180.0,
-              height: 300.0,
-              child: Stack(alignment: Alignment.center, children: <Widget>[
-                Positioned(
-                  top: 40,
-                  child: Text(
-                    "Penicillin",
-                    style: TextStyle(
-                      fontFamily: 'Raleway',
-                      color: Colors.white,
-                      fontSize: 26.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Positioned(
-                  top: 70.0,
-                  child: Opacity(
-                    opacity: 0.80,
-                    child: Text(
-                      "6 Days Left",
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 18.0,
+                      Positioned(
+                        top: 70.0,
+                        child: Opacity(
+                          opacity: 0.80,
+                          child: Text(
+                            "12 Days Left",
+                            style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Colors.white,
+                              fontSize: 18.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                    ]),
+                    decoration: BoxDecoration(
+                      color: taskBoxColor,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(50.0),
+                        topLeft: Radius.circular(50.0),
+                        bottomLeft: Radius.circular(50.0),
+                        bottomRight: Radius.circular(50.0),
                       ),
-                      textAlign: TextAlign.center,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 6.0,
+                            offset: Offset(3.0, 3.0))
+                      ],
                     ),
-                  ),
-                )
-              ]),
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50.0),
-                  topLeft: Radius.circular(50.0),
-                  bottomLeft: Radius.circular(50.0),
-                  bottomRight: Radius.circular(50.0),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 6.0,
-                      offset: Offset(3.0, 3.0))
-                ],
-              ),
-            ),
-          ),
-          Positioned(
-            //Forth Container
-            top: 535.0,
-            right: 12.0,
-            child: Container(
-              width: 180.0,
-              height: 300.0,
-              child: Stack(alignment: Alignment.center, children: <Widget>[
-                Positioned(
-                  top: 40,
-                  child: Text(
-                    "Grefiofulvine",
-                    style: TextStyle(
-                      fontFamily: 'Raleway',
-                      color: Colors.white,
-                      fontSize: 26.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Positioned(
-                  top: 70.0,
-                  child: Opacity(
-                    opacity: 0.80,
-                    child: Text(
-                      "6 Days Left",
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 18.0,
+                  ), //EndFirstContainer
+                  Container(
+                    //SecondContainer
+                    width: 180.0,
+                    height: 300.0,
+                    child:
+                        Stack(alignment: Alignment.center, children: <Widget>[
+                      Positioned(
+                        top: 40,
+                        child: Text(
+                          "Amoxicillin",
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Colors.white,
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
-                      textAlign: TextAlign.center,
+                      Positioned(
+                        top: 70.0,
+                        child: Opacity(
+                          opacity: 0.80,
+                          child: Text(
+                            "6 Days Left",
+                            style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Colors.white,
+                              fontSize: 18.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                    ]),
+                    decoration: BoxDecoration(
+                      color: taskBoxColor,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(50.0),
+                        topLeft: Radius.circular(50.0),
+                        bottomLeft: Radius.circular(50.0),
+                        bottomRight: Radius.circular(50.0),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 6.0,
+                            offset: Offset(3.0, 3.0))
+                      ],
                     ),
-                  ),
-                )
-              ]),
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 171, 10),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50.0),
-                  topLeft: Radius.circular(50.0),
-                  bottomLeft: Radius.circular(50.0),
-                  bottomRight: Radius.circular(50.0),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 6.0,
-                      offset: Offset(3.0, 3.0))
+                  ), //EndSecondContainer
+                  Container(
+                    //ThirdContainer
+                    width: 180.0,
+                    height: 300.0,
+                    child:
+                        Stack(alignment: Alignment.center, children: <Widget>[
+                      Positioned(
+                        top: 40,
+                        child: Text(
+                          "Penicillin",
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Colors.white,
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      Positioned(
+                        top: 70.0,
+                        child: Opacity(
+                          opacity: 0.80,
+                          child: Text(
+                            "6 Days Left",
+                            style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Colors.white,
+                              fontSize: 18.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                    ]),
+                    decoration: BoxDecoration(
+                      color: taskBoxColor,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(50.0),
+                        topLeft: Radius.circular(50.0),
+                        bottomLeft: Radius.circular(50.0),
+                        bottomRight: Radius.circular(50.0),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 6.0,
+                            offset: Offset(3.0, 3.0))
+                      ],
+                    ),
+                  ), //EndThirdContainer
+                  Container(
+                    //ForthContainer
+                    width: 180.0,
+                    height: 300.0,
+                    child:
+                        Stack(alignment: Alignment.center, children: <Widget>[
+                      Positioned(
+                        top: 40,
+                        child: Text(
+                          "Grefiofulvine",
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Colors.white,
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      Positioned(
+                        top: 70.0,
+                        child: Opacity(
+                          opacity: 0.80,
+                          child: Text(
+                            "6 Days Left",
+                            style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Colors.white,
+                              fontSize: 18.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                    ]),
+                    decoration: BoxDecoration(
+                      color: taskBoxColor,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(50.0),
+                        topLeft: Radius.circular(50.0),
+                        bottomLeft: Radius.circular(50.0),
+                        bottomRight: Radius.circular(50.0),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 6.0,
+                            offset: Offset(3.0, 3.0))
+                      ],
+                    ),
+                  ), //EndForthContainer
                 ],
               ),
             ),
@@ -352,11 +354,26 @@ class _KeptCriptionState extends State<KeptCription> {
 void _mediAddBottomSheet(context) {
   showModalBottomSheet(
       context: context,
-      builder: (BuildContext bc) {
-        return Container(
-          height: 500.0,
-          child: Stack(
-            children: <Widget>[],
+      builder: (builder) {
+        return new Container(
+          height: 350,
+          color: Colors.transparent,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(25),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(15),
+                topRight: Radius.circular(15),
+              ),
+            ),
+            child: Text(
+              "Add a Medication",
+              style: TextStyle(
+                fontFamily: 'Raleway_SemiBold',
+                fontSize: 30,
+                color: bottomSheetTitle,
+              ),
+            ),
           ),
         );
       });

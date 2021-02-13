@@ -1,7 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-import 'models/global.dart';
+import 'package:project_keptcription/models/global.dart';
+import 'models/Drawer/drawer_header.dart';
 
 //GitHub - Press commit to update git
 void main() => runApp(MaterialApp(
@@ -21,17 +22,15 @@ class _KeptCriptionState extends State<KeptCription> {
       appBar: AppBar(
         leading: Align(
           alignment: Alignment(-0.00001, 0),
-          child: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.menu,
-              color: Colors.white,
-              size: 50.0,
-            ),
-          ),
         ),
         backgroundColor: Color.fromRGBO(44, 107, 195, 1),
         elevation: 0.0,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[DrawerHeader(child: drawerHead)],
+        ),
       ),
       body: Stack(
         children: <Widget>[

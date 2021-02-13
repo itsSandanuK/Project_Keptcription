@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'models/global.dart';
-import 'models/add_bottom_sheet.dart';
 
 //GitHub - Press commit to update git
 void main() => runApp(MaterialApp(
@@ -369,7 +368,8 @@ void _mediAddBottomSheet(context) {
                     topRight: Radius.circular(15),
                   ),
                 ),
-                child: Center(
+                child: Align(
+                  alignment: Alignment.topCenter,
                   child: Container(
                     padding: EdgeInsets.only(
                       top: 12,
@@ -391,7 +391,7 @@ void _mediAddBottomSheet(context) {
                     Stack(
                       children: <Widget>[
                         Positioned(
-                          child: Center(
+                          child: Positioned(
                             child: Text(
                               ":Medication",
                               style: TextStyle(

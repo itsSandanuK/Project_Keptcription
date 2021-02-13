@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'models/global.dart';
+import 'models/add_bottom_sheet.dart';
 
 //GitHub - Press commit to update git
 void main() => runApp(MaterialApp(
@@ -94,7 +95,7 @@ class _KeptCriptionState extends State<KeptCription> {
                   ),
                 ]),
                 decoration: BoxDecoration(
-                  color: appBarColor,
+                  color: Color.fromRGBO(44, 107, 195, 1),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(50.0),
                     bottomRight: Radius.circular(50.0),
@@ -355,33 +356,115 @@ void _mediAddBottomSheet(context) {
   showModalBottomSheet(
       context: context,
       builder: (builder) {
-        return new Container(
-          height: 350,
-          color: Colors.transparent,
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(25),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15),
-                topRight: Radius.circular(15),
-              ),
-            ),
-            child: Center(
-              child: Container(
-                padding: EdgeInsets.only(
-                  top: 12,
+        return Stack(children: <Widget>[
+          Container(
+            height: 500,
+            color: Colors.transparent,
+            child: Stack(children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(25),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15),
+                  ),
                 ),
-                child: Text(
-                  "Add a Medication",
-                  style: TextStyle(
-                    fontFamily: 'SanFransico_Bold',
-                    fontSize: 30,
-                    color: bottomSheetTitleColor,
+                child: Center(
+                  child: Container(
+                    padding: EdgeInsets.only(
+                      top: 12,
+                    ),
+                    child: Text(
+                      "Add a Medication",
+                      style: TextStyle(
+                        fontFamily: 'SanFransico_Bold',
+                        fontSize: 30,
+                        color: bottomSheetTitleColor,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+              ListView(
+                children: <Widget>[
+                  Row(children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Positioned(
+                          child: Center(
+                            child: Text(
+                              ":Medication",
+                              style: TextStyle(
+                                color: bottomSheetTitleColor,
+                                fontFamily: 'SanFransico_SemiBold',
+                                fontSize: 27,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          child: Container(
+                            height: 62,
+                            width: 324,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15))),
+                            child: Center(
+                              child: Text(
+                                "Eg:- Asprin / Red pill / Iron pill",
+                                style: TextStyle(
+                                  color: bottomSheetEgColor.withOpacity(50),
+                                  fontFamily: 'SanFransico',
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Stack(
+                      children: <Widget>[
+                        Positioned(
+                          child: Center(
+                            child: Text(
+                              ":Time pack",
+                              style: TextStyle(
+                                color: bottomSheetTitleColor,
+                                fontFamily: 'SanFransico_SemiBold',
+                                fontSize: 27,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          child: Container(
+                            height: 62,
+                            width: 324,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15))),
+                            child: Center(
+                              child: Text(
+                                "Eg:- 12pills",
+                                style: TextStyle(
+                                  color: bottomSheetEgColor.withOpacity(50),
+                                  fontFamily: 'SanFransico',
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ]),
+                ],
+              ),
+            ]),
           ),
-        );
+        ]);
       });
 }

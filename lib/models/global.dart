@@ -13,3 +13,5 @@ Color appBarColorDark = new Color(0xf5B7C9E);
 Color searchColorDark = new Color(0xff000000);
 
 Color bottomSheetTitleColor = new Color(0xff314963);
+
+Color bottomSheetEgColor = new Color(0xff314963);

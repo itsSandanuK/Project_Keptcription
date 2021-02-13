@@ -15,3 +15,5 @@ Color searchColorDark = new Color(0xff000000);
 Color bottomSheetTitleColor = new Color(0xff314963);
 
 Color bottomSheetEgColor = new Color(0xff314963);
+
+Color drewerBackgroundColor = new Color(0xff2C6BAB);

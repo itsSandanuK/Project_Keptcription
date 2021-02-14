@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:project_keptcription/main.dart';
 import 'package:project_keptcription/models/global.dart';
 
 Widget drawerHead = Stack(

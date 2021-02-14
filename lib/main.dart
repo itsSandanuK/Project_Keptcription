@@ -29,7 +29,11 @@ class _KeptCriptionState extends State<KeptCription> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: <Widget>[DrawerHeader(child: drawerHead)],
+          children: <Widget>[
+            DrawerHeader(
+              child: drawerHead,
+            )
+          ],
         ),
       ),
       body: Stack(

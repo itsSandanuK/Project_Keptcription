@@ -38,6 +38,50 @@ class _KeptCriptionState extends State<KeptCription> {
       ),
       body: Stack(
         children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 201,
+            ),
+            child: GridView.count(
+              scrollDirection: Axis.vertical,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 5,
+              crossAxisCount: 2,
+              childAspectRatio: (180 / 300),
+              children: [
+                Container(
+                  width: 180,
+                  height: 300,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                  ),
+                ),
+                Container(
+                  width: 180,
+                  height: 300,
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                ),
+                Container(
+                  width: 180,
+                  height: 300,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                  ),
+                ),
+                Container(
+                  width: 180,
+                  height: 300,
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                ),
+              ],
+            ),
+          ), //bottomAppBar
           Container(
             height: 200,
             decoration: BoxDecoration(
@@ -46,39 +90,13 @@ class _KeptCriptionState extends State<KeptCription> {
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
                 )),
-          ), //bottomAppBar
-          Positioned(
-            //first Container
-            top: 230,
-            left: 5,
-            child: Container(
-              width: 200,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.all(Radius.circular(50)),
-              ),
-            ),
           ),
-          Positioned(
-            //Second Container
-            top: 230,
-            right: 5,
-            child: Container(
-              width: 200,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.all(Radius.circular(50)),
-              ),
-            ),
-          )
         ],
       ),
       floatingActionButton: Stack(children: <Widget>[
         Container(
-            height: 75.0,
-            width: 75.0,
+            height: 65.0,
+            width: 65.0,
             child: FittedBox(
               child: Positioned(
                 child: FloatingActionButton(
@@ -87,7 +105,7 @@ class _KeptCriptionState extends State<KeptCription> {
                   },
                   child: Icon(
                     Icons.add,
-                    size: 40,
+                    size: 50,
                   ),
                   elevation: 0.0,
                   backgroundColor: Colors.blue[200],
@@ -103,12 +121,30 @@ void _mediAddBottomSheet(context) {
   showModalBottomSheet(
       context: context,
       builder: (builder) {
-        return Stack(children: <Widget>[
-          Container(
-            height: 600,
-            color: Colors.transparent,
-            child: Stack(children: <Widget>[]),
+        return Container(
+          height: 700,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(50),
+              topRight: Radius.circular(50),
+            ),
+            color: Colors.white,
           ),
-        ]);
+          child: Stack(
+            children: <Widget>[
+              Align(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  "Add a Medication",
+                  style: TextStyle(
+                    fontFamily: 'Raleway_SemiBold',
+                    color: Colors.black,
+                    fontSize: 30.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
       });
 }

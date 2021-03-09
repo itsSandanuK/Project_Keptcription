@@ -7,14 +7,6 @@ Widget drawerHead = Stack(
     Container(
       height: 53,
       width: 53,
-      child: FlatButton(
-        onPressed: () {},
-        child: Icon(
-          Icons.menu,
-          color: Colors.white,
-          size: 50.0,
-        ),
-      ),
     ),
     Positioned(
       top: 5,

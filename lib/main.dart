@@ -48,6 +48,9 @@ class _KeptCriptionState extends State<KeptCription> {
                 )),
           ), //bottomAppBar
           Positioned(
+            //first Container
+            top: 230,
+            left: 5,
             child: Container(
               width: 200,
               height: 300,
@@ -57,6 +60,19 @@ class _KeptCriptionState extends State<KeptCription> {
               ),
             ),
           ),
+          Positioned(
+            //Second Container
+            top: 230,
+            right: 5,
+            child: Container(
+              width: 200,
+              height: 300,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.all(Radius.circular(50)),
+              ),
+            ),
+          )
         ],
       ),
       floatingActionButton: Stack(children: <Widget>[

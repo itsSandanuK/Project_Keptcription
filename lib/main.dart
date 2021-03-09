@@ -23,7 +23,7 @@ class _KeptCriptionState extends State<KeptCription> {
         leading: Align(
           alignment: Alignment(-0.00001, 0),
         ),
-        backgroundColor: Color.fromRGBO(44, 107, 195, 1),
+        backgroundColor: Color(0xff063970),
         elevation: 0.0,
       ),
       drawer: Drawer(
@@ -40,7 +40,7 @@ class _KeptCriptionState extends State<KeptCription> {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.only(
-              top: 201,
+              top: 200,
             ),
             child: GridView.count(
               scrollDirection: Axis.vertical,
@@ -49,11 +49,32 @@ class _KeptCriptionState extends State<KeptCription> {
               crossAxisCount: 2,
               childAspectRatio: (180 / 300),
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Container(
+                    width: 180,
+                    height: 300,
+                    decoration: BoxDecoration(
+                      color: Colors.red[700],
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Container(
+                    width: 180,
+                    height: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.red[700],
+                        borderRadius: BorderRadius.all(Radius.circular(50))),
+                  ),
+                ),
                 Container(
                   width: 180,
                   height: 300,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.red[700],
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
                 ),
@@ -61,31 +82,17 @@ class _KeptCriptionState extends State<KeptCription> {
                   width: 180,
                   height: 300,
                   decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.all(Radius.circular(50))),
-                ),
-                Container(
-                  width: 180,
-                  height: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                  ),
-                ),
-                Container(
-                  width: 180,
-                  height: 300,
-                  decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: Colors.red[700],
                       borderRadius: BorderRadius.all(Radius.circular(50))),
                 ),
               ],
             ),
-          ), //bottomAppBar
+          ),
           Container(
+            //bottomAppBar
             height: 200,
             decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 107, 195, 1),
+                color: Color(0xff063970),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
@@ -106,9 +113,10 @@ class _KeptCriptionState extends State<KeptCription> {
                   child: Icon(
                     Icons.add,
                     size: 50,
+                    color: Colors.red[800],
                   ),
                   elevation: 0.0,
-                  backgroundColor: Colors.blue[200],
+                  backgroundColor: Colors.grey[200],
                 ),
               ),
             )),
@@ -123,23 +131,118 @@ void _mediAddBottomSheet(context) {
       builder: (builder) {
         return Container(
           height: 700,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(50),
-              topRight: Radius.circular(50),
-            ),
-            color: Colors.white,
-          ),
+          color: Color(0xff063970),
           child: Stack(
             children: <Widget>[
-              Align(
-                alignment: Alignment.topCenter,
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 2,
+                ),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    "Add a Medication",
+                    style: TextStyle(
+                      fontFamily: 'Raleway_SemiBold',
+                      color: Colors.grey[200],
+                      fontSize: 35.0,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 73,
+                  left: 35,
+                ),
                 child: Text(
-                  "Add a Medication",
+                  " Medicine Name",
                   style: TextStyle(
-                    fontFamily: 'Raleway_SemiBold',
-                    color: Colors.black,
-                    fontSize: 30.0,
+                      fontFamily: 'Raleway',
+                      color: Colors.grey[200],
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  bottom: 170,
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 350,
+                    height: 62,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(50),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 190,
+                  left: 35,
+                ),
+                child: Text(
+                  " Time Select",
+                  style: TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.grey[200],
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 70,
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 350,
+                    height: 62,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(50),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 310,
+                  left: 35,
+                ),
+                child: Text(
+                  " Quantity",
+                  style: TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.grey[200],
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 310,
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 350,
+                    height: 62,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(50),
+                      ),
+                    ),
                   ),
                 ),
               ),

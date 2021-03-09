@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Color taskBoxColor = new Color(0xff2C6BAB);
 
-Color appBarColor = new Color(0xff2F87DFf);
+Color appBarColor = new Color(0xff063970);
 
 Color searchColor = new Color(0xff707070);
 

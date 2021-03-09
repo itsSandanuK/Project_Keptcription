@@ -37,7 +37,7 @@ class _KeptCriptionState extends State<KeptCription> {
         ),
       ),
       body: Stack(
-        children:<Widget>[
+        children: <Widget>[
           Container(
             height: 200,
             decoration: BoxDecoration(
@@ -53,7 +53,7 @@ class _KeptCriptionState extends State<KeptCription> {
               height: 300,
               decoration: BoxDecoration(
                 color: Colors.blue,
-                borderRadius: BorderRadius.all(Radius.circular(50)             
+                borderRadius: BorderRadius.all(Radius.circular(50)),
               ),
             ),
           ),

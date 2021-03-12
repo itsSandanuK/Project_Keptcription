@@ -19,58 +19,66 @@ class _KeptCriptionState extends State<KeptCription> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leading: Align(
-          alignment: Alignment(-0.00001, 0),
-        ),
-        backgroundColor: Color(0xff063970),
-        elevation: 0.0,
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: drawerHead,
-            )
-          ],
-        ),
-      ),
-      body: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 200,
-            ),
-            child: GridView.count(
-              scrollDirection: Axis.vertical,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 5,
-              crossAxisCount: 2,
-              childAspectRatio: (180 / 300),
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Container(
-                    width: 180,
-                    height: 300,
-                    decoration: BoxDecoration(
-                      color: Colors.red[700],
-                      borderRadius: BorderRadius.all(Radius.circular(50)),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(250),
+        child: AppBar(
+          flexibleSpace: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Opacity(
+                  opacity: 0.5,
+                  child: Text(
+                    '10',
+                    style: TextStyle(
+                      fontSize: 85,
+                      fontFamily: "SanFransico",
+                      color: Colors.grey[200],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Container(
-                    width: 180,
-                    height: 300,
-                    decoration: BoxDecoration(
-                        color: Colors.red[700],
-                        borderRadius: BorderRadius.all(Radius.circular(50))),
+                Text(
+                  "12",
+                  style: TextStyle(
+                    fontSize: 140,
+                    fontFamily: "SanFransico",
+                    color: Colors.grey[200],
                   ),
                 ),
-                Container(
+                Opacity(
+                  opacity: 0.5,
+                  child: Text(
+                    '13',
+                    style: TextStyle(
+                      fontSize: 85,
+                      fontFamily: "SanFransico",
+                      color: Colors.grey[200],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          shape: (RoundedRectangleBorder(
+              borderRadius:
+                  BorderRadius.vertical(bottom: Radius.circular(50)))),
+          backgroundColor: Color(0xff063970),
+          elevation: 0.0,
+        ),
+      ),
+      drawer: Drawer(),
+      body: Stack(
+        children: <Widget>[
+          GridView.count(
+            scrollDirection: Axis.vertical,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 5,
+            crossAxisCount: 2,
+            childAspectRatio: (180 / 300),
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Container(
                   width: 180,
                   height: 300,
                   decoration: BoxDecoration(
@@ -78,25 +86,33 @@ class _KeptCriptionState extends State<KeptCription> {
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
                 ),
-                Container(
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Container(
                   width: 180,
                   height: 300,
                   decoration: BoxDecoration(
                       color: Colors.red[700],
                       borderRadius: BorderRadius.all(Radius.circular(50))),
                 ),
-              ],
-            ),
-          ),
-          Container(
-            //bottomAppBar
-            height: 200,
-            decoration: BoxDecoration(
-                color: Color(0xff063970),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
-                )),
+              ),
+              Container(
+                width: 180,
+                height: 300,
+                decoration: BoxDecoration(
+                  color: Colors.red[700],
+                  borderRadius: BorderRadius.all(Radius.circular(50)),
+                ),
+              ),
+              Container(
+                width: 180,
+                height: 300,
+                decoration: BoxDecoration(
+                    color: Colors.red[700],
+                    borderRadius: BorderRadius.all(Radius.circular(50))),
+              ),
+            ],
           ),
         ],
       ),

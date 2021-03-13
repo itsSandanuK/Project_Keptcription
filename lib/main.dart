@@ -66,7 +66,159 @@ class _KeptCriptionState extends State<KeptCription> {
           elevation: 0.0,
         ),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Container(
+          color: Color(0xff063970),
+          child: ListView(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.menu,
+                    size: 50,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "Welcome Homie!",
+                    style: TextStyle(
+                      fontFamily: "Raleway_SemiBold",
+                      color: Colors.grey[200],
+                      fontSize: 50,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.person_add_alt_1_rounded,
+                    size: 50,
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        "John Dove",
+                        style: TextStyle(
+                          color: Colors.grey[200],
+                          fontFamily: "SanFransico",
+                          fontSize: 50,
+                        ),
+                      ),
+                      Text(
+                        "@JohnDove",
+                        style: TextStyle(
+                          color: Colors.grey[200],
+                          fontFamily: "SanFransico",
+                          fontSize: 50,
+                        ),
+                      ),
+                      Text(
+                        "johndo24@gmail.com",
+                        style: TextStyle(
+                          color: Colors.grey[200],
+                          fontFamily: "SanFransico",
+                          fontSize: 50,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.mediation,
+                    color: Colors.grey[200],
+                    size: 50,
+                  ),
+                  Text(
+                    "All Medication",
+                    style: TextStyle(
+                      fontFamily: "SanFransico",
+                      fontSize: 50,
+                      color: Colors.grey[200],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.report,
+                    color: Colors.grey[200],
+                    size: 50,
+                  ),
+                  Text(
+                    "Reports",
+                    style: TextStyle(
+                      fontFamily: "SanFransico",
+                      fontSize: 50,
+                      color: Colors.grey[200],
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.help,
+                    color: Colors.grey[200],
+                    size: 50,
+                  ),
+                  Text(
+                    "Help",
+                    style: TextStyle(
+                      fontFamily: "SanFransico",
+                      fontSize: 50,
+                      color: Colors.grey[200],
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.phone,
+                    color: Colors.grey[200],
+                    size: 50,
+                  ),
+                  Text(
+                    "Contact Us",
+                    style: TextStyle(
+                      fontFamily: "SanFransico",
+                      fontSize: 50,
+                      color: Colors.grey[200],
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.rate_review,
+                    color: Colors.grey[200],
+                    size: 50,
+                  ),
+                  Text(
+                    "Rate KeptCription",
+                    style: TextStyle(
+                      fontFamily: "SanFransico",
+                      fontSize: 50,
+                      color: Colors.grey[200],
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Stack(
         children: <Widget>[
           GridView.count(
